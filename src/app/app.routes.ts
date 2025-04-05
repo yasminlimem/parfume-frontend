@@ -6,6 +6,9 @@ import {FirstStepComponent} from './firstStep/first-step.component';
 import {SecondStepComponent} from './second-step/second-step.component';
 import {ThirdWomenStepComponent} from './third-women-step/third-women-step.component';
 import {FourthStepComponent} from './fourth-step/fourth-step.component';
+import {FifthStepComponent} from './fifth-step/fifth-step.component';
+import {CheckoutComponent} from './checkout/checkout.component';
+import {HomeComponent} from './home/home.component';
 
 export const routes: Routes = [
   {
@@ -21,6 +24,7 @@ export const routes: Routes = [
     component: SignUpComponent,
   },
   {
+    title: 'Create Your Perfume',
     path:'firstStep',
     component: FirstStepComponent,
   },
@@ -29,12 +33,23 @@ export const routes: Routes = [
     component: SecondStepComponent,
   },
   {
-    path:'thirdWomenStep',
+    path:'thirdStep',
     component: ThirdWomenStepComponent,
   },
   {
     path:'fourthStep',
     component: FourthStepComponent,
+  },
+  {
+    path:'fifthStep',
+    component: FifthStepComponent,
+  },
+  {
+    path:'checkout',
+    component: CheckoutComponent,
+  },
+  {
+    path:'home',
+    component:HomeComponent
   }
-
 ];

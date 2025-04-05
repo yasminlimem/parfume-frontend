@@ -4,7 +4,7 @@ import {TitleComponent} from './title/title.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TitleComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
