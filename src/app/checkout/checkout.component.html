@@ -1,0 +1,38 @@
+<div class="container text-center mt-5">
+  <h2 class="fw-bold">Create Your Perfume</h2>
+  <p class="fs-5">Your personalized fragrance is ready</p>
+
+  <div class="row justify-content-center mt-4">
+    <!-- Left Side: Perfume Details -->
+    <div class="col-md-6">
+      <div class="card shadow-sm p-3">
+        <ul class="list-unstyled text-start">
+          <li><strong>Gender :</strong> {{ selectedGender }}</li>
+          <li><strong>Character :</strong> {{ selectedCharacter }}</li>
+          <li><strong>Scent :</strong> {{ selectedFragrance }}</li>
+          <li><strong>Bottle Type :</strong> {{ selectedBottle }}</li>
+          <li><strong>Name on the Perfume :</strong> {{ name }}</li>
+          <mat-divider></mat-divider>
+          <li>
+            <strong class="">Bottle Size :</strong>
+            <select class="form-select mt-2" [formControl]="sizeControl">
+              @for (size of bottleSizes; track size) {
+                <option [value]="size.value">{{ size.label }}</option>
+              }
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Side: Pricing & Buy Button -->
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h4 class="fw-bold">FINAL PRICE</h4>
+        <h2 class="text-primary">₹{{ price }}/-</h2>
+        <small class="text-muted">(Inclusive of GST)</small>
+        <button class="btn btn-primary mt-3 w-100" (click)="buyNow()">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center gap-3">
+  @for (card of cards; track card) {
+    <div
+      class="card text-center p-2"
+      [ngClass]="{
+      'border-primary': selectedGender === 'male' && selectedCharacter === card.name,
+      'border-danger': selectedGender === 'female'  && selectedCharacter === card.name
+      }"
+      (click)="selectCharacter(card.name)"
+      style="width: 300px; cursor: pointer;"
+    >
+      <img [src]="card.src" class="card-img-top img-fluid rounded-circle" alt="Male">
+      <div class="card-body">
+        <p class="card-text fw-bold">{{ card.name }}</p>
+      </div>
+    </div>
+  }
+</div>

@@ -1,0 +1,22 @@
+<section id="hero">
+  <div class="video-container">
+    <video src="ved.mp4" autoplay muted loop></video>
+  </div>
+  <h2>Create Your Own Perfume</h2>
+  <h4>Choose your bottle, write your name on it, and fill it with your favorite scents!</h4>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <button [routerLink]="['/firstStep']" class="btn">Create Now</button>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="card">
+    <img src="for-men.jpg" alt="Perfume for Men">
+    <button [routerLink]="['/secondStep']"  [queryParams]="{ gender: 'male' }">FOR MEN</button>
+  </div>
+  <div class="card">
+    <img src="eau-de-toilette-6399434_1280.jpg" alt="Perfume for Women">
+    <button [routerLink]="['/secondStep']"  [queryParams]="{ gender: 'female' }">FOR WOMEN</button>
+  </div>
+</div>

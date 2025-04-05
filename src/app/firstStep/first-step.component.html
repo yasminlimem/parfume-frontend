@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center gap-3">
+  <div
+    class="card text-center p-2"
+    [ngClass]="{'border-primary': selectedGender === 'male'}"
+    (click)="selectGender('male')"
+    style="width: 150px; cursor: pointer;"
+  >
+    <img src="male.png" class="card-img-top img-fluid rounded-circle" alt="Male">
+    <div class="card-body">
+      <p class="card-text fw-bold">Male</p>
+    </div>
+  </div>
+
+  <div
+    class="card text-center p-2"
+    [ngClass]="{'border-danger': selectedGender === 'female'}"
+    (click)="selectGender('female')"
+    style="width: 150px; cursor: pointer;"
+  >
+    <img src="female.png" class="card-img-top img-fluid rounded-circle" alt="Female">
+    <div class="card-body">
+      <p class="card-text fw-bold">Female</p>
+    </div>
+    </div>
+</div>

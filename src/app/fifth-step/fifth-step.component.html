@@ -1,0 +1,14 @@
+<div class="container text-center mt-5">
+  <h2 class="fw-bold">Create Your Perfume</h2>
+  <p class="fs-5">What's the name of your fragrance?</p>
+
+  <div class="card shadow-sm p-4 mx-auto">
+    <label class="form-label fw-semibold">What would you like to name your Perfume?</label>
+    <input type="text" class="form-control text-center" matInput [formControl]="nameControl"
+           maxlength="25" placeholder="Enter fragrance name">
+    <small class="text-muted">Maximum 25 Characters Only</small>
+
+    <button class="btn btn-primary mt-3 w-50 mx-auto" (click)="checkout()">Save & Continue</button>
+  </div>
+</div>
+
